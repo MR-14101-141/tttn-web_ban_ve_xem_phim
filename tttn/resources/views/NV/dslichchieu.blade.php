@@ -1,5 +1,6 @@
 @extends('layout_NV')
 @section('dscuanv')
+<br>
 <div class="container-fluid">
     <div class="card">
         <div class="card-body">

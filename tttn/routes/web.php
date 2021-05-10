@@ -18,6 +18,9 @@ use App\Http\Controllers\LichChieuController;
 */
 
 //cronjob
+Route::get('/', function() {
+    return \Redirect::to('/home');
+});
 Route::get('/cronjob', function() {
     Artisan::call('schedule:run ');
 });

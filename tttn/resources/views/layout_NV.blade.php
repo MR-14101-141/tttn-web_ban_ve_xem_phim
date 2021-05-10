@@ -18,9 +18,9 @@
     <!-- Favicon-->
     <link rel="shortcut icon" href="admin_assets/img/favicon.png?3">
     <style>
-    #sidebar{
+    #sidebar {
         margin-left: 0px;
-        width : 230px;
+        width: 230px;
     }
     </style>
 </head>
@@ -35,25 +35,26 @@
                 <li class="nav-item">
 
                 </li>
-                <li class="nav-item dropdown ml-auto"><a id="userInfo" href="http://example.com" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Nhân viên:
-                        <?php 
-                		$tenNV = Session::get('tenNV');
-						if($tenNV){
-							echo  $tenNV;
-							
-						}
-                        ?>
-                        
-                        </a>
-                    <div aria-labelledby="userInfo" class="dropdown-menu"><a href="{{URL::to('/profileadmin',Session::get('idNV'))}}" class="dropdown-item"><strong
-                                class="d-block text-uppercase headings-font-family">  <?php 
-                		$tenNV = Session::get('tenNV');
-						if($tenNV){
-							echo  $tenNV;
-							
-						}
-                        ?></strong><small>
+                <li class="nav-item dropdown ml-auto"><a id="userInfo" href="" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" class="nav-link dropdown-toggle">Nhân viên:
+                        <?php
+$tenNV = Session::get('tenNV');
+if ($tenNV) {
+    echo $tenNV;
+
+}
+?>
+
+                    </a>
+                    <div aria-labelledby="userInfo" class="dropdown-menu"><a
+                            href="{{URL::to('/profileadmin',Session::get('idNV'))}}" class="dropdown-item"><strong
+                                class="d-block text-uppercase headings-font-family"> <?php
+$tenNV = Session::get('tenNV');
+if ($tenNV) {
+    echo $tenNV;
+
+}
+?></strong><small>
                                 Thông tin nhân viên</small></a>
                         <div class="dropdown-divider"></div><a href="{{url('/')}}" class="dropdown-item">Trang chủ</a>
                         <div class="dropdown-divider"></div><a href="{{URL::to('/logoutadmin')}}"
@@ -87,21 +88,27 @@
     </div>
     <script>
     function Nav() {
-        if(document.getElementById("sidebar").style.marginLeft == "-110px")
-        {
+        if (document.getElementById("sidebar").style.marginLeft == "-110px") {
             document.getElementById("sidebar").style.marginLeft = "0px";
-            document.getElementById("sidebar").style.width = "230px"; 
-        }
-        else
-        {
+            document.getElementById("sidebar").style.width = "230px";
+        } else {
             document.getElementById("sidebar").style.marginLeft = "-110px";
             document.getElementById("sidebar").style.width = "100px";
         }
     }
+
     function closeNav() {
         document.getElementById("sidebar").style.width = "0";
-    } 
+    }
     </script>
-    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+</body>
 
-    </html>
+</html>
