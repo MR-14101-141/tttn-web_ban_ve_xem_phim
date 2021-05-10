@@ -36,12 +36,27 @@
 
                 </li>
                 <li class="nav-item dropdown ml-auto"><a id="userInfo" href="http://example.com" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">ABC</a>
-                    <div aria-labelledby="userInfo" class="dropdown-menu"><a href="#" class="dropdown-item"><strong
-                                class="d-block text-uppercase headings-font-family">abc</strong><small>Web
-                                Developer</small></a>
+                        aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Nhân viên:
+                        <?php 
+                		$tenNV = Session::get('tenNV');
+						if($tenNV){
+							echo  $tenNV;
+							
+						}
+                        ?>
+                        
+                        </a>
+                    <div aria-labelledby="userInfo" class="dropdown-menu"><a href="{{URL::to('/profileadmin',Session::get('idNV'))}}" class="dropdown-item"><strong
+                                class="d-block text-uppercase headings-font-family">  <?php 
+                		$tenNV = Session::get('tenNV');
+						if($tenNV){
+							echo  $tenNV;
+							
+						}
+                        ?></strong><small>
+                                Thông tin nhân viên</small></a>
                         <div class="dropdown-divider"></div><a href="{{url('/')}}" class="dropdown-item">Trang chủ</a>
-                        <div class="dropdown-divider"></div><a href="{{url('dangxuat')}}"
+                        <div class="dropdown-divider"></div><a href="{{URL::to('/logoutadmin')}}"
                             class="dropdown-item">Logout</a>
                     </div>
                 </li>
@@ -63,7 +78,7 @@
                             class="o-survey-1 mr-3 text-gray"></i><span>Quản Lý Khuyến Mãi</span></a></li>
                 <li class="sidebar-list-item"><a href="" class="sidebar-link text-dark"><i
                             class="o-survey-1 mr-3 text-gray"></i><span>Quản Lý Người Dùng</span></a></li>
-                <li class="sidebar-list-item"><a href="" class="sidebar-link text-dark"><i
+                <li class="sidebar-list-item"><a href="{{URL::to('/logoutadmin')}}" class="sidebar-link text-dark"><i
                             class="o-exit-1 mr-3 text-gray"></i><span>Logout</span></a></li>
             </ul>
 

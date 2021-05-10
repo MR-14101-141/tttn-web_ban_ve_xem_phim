@@ -1,9 +1,9 @@
-@extends('layout_KH')
-@section('layout_KH')
-{{$cus_id = Session::get('idKH')}}
+@extends('layout_NV')
+@section('dscuanv')
+{{$nv_id = Session::get('idNV')}}
 <section class="container">
     <h1 class="d-flex justify-content-center">Đổi mật khẩu</h1>
-    <form action="{{URL::to('/update-password')}}" method="post">
+    <form action="{{URL::to('/update-passwordadmin')}}" method="post">
         @csrf
         <div class="col-md-3"></div>
         <div class="col-md-6">

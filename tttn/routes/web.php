@@ -55,6 +55,12 @@ Route::get('/dsghe/{idPhong}/{idLC}','App\Http\Controllers\homeController@viewDS
 
 //Admin
 Route::get('/admin','App\Http\Controllers\adminController@admin');
+Route::post('/admin-dashboard','App\Http\Controllers\adminController@login');
+Route::get('/logoutadmin','App\Http\Controllers\adminController@logout');
+Route::get('/profileadmin/{idNV}','App\Http\Controllers\adminController@profileadmin');
+Route::post('/update-nv/{idNV}','App\Http\Controllers\adminController@updateprofile');
+Route::get('change-passwordadmin','App\Http\Controllers\adminController@changepass');
+Route::post('update-passwordadmin','App\Http\Controllers\adminController@updatepass');
 
 //lichchieu
 Route::get('/lichchieu',[LichChieuController::class,"index"])->name('lichchieu');
