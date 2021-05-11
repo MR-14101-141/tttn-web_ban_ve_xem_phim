@@ -15,7 +15,10 @@ class tbl_phim extends Model
 		"idLPhim",
 		"tenPhim",
 		"trangthai",
-		"imgPhim"
+		"imgPhim",
+		"mieutaPhim",
+		"daodienPhim",
+		"dienvien"
 	];
 
     public function tbl_lichchieu(){
