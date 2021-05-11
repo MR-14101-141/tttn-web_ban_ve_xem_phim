@@ -9,7 +9,7 @@
                 {{ csrf_field() }}
 
                 <div class="form-group">
-                    <label for="tenPhim">Ten Phim</label>
+                    <label for="tenPhim">Tên Phim</label>
                     <input type="text" class="form-control" id="ten_phim" name="tenPhim">
                 </div>
                 <div class="form-group">
@@ -19,19 +19,31 @@
                     <img id="output" width="100" height="150">
                 </div>
                 <div class="form-group">
-                    <label for="trangthai">Trang thai</label>
+                    <label for="trangthai">Trạng thái</label>
                     <select class="border border-black" name="trangthai">
                         <option value="1">Còn chiếu</option>
                         <option value="0">Hết chiếu</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Loai Phim</label>
+                    <label>Loại Phim</label>
                     <select class="border border-black" name="LPhim">
                         @foreach(App\Models\tbl_loaiphim::all() as $LoaiPhim)
                         <option value="{{ $LoaiPhim->idLPhim }}">{{$LoaiPhim->tenLPhim}}</option>
                         @endforeach
                     </select>
+                </div>
+                <div class="form-group">
+                	<label>Tóm tắt</label>
+                	<input type="text" class="form-control" name="mieutaPhim">
+                </div>
+                <div class="form-group">
+                	<label>Đạo diễn</label>
+                	<input type="text" class="form-control" name="daodienPhim">
+                </div>
+                <div class="form-group">
+                    <label>Diễn viên</label>
+                    <input type="text" class="form-control" name="dienvien">
                 </div>
                 @if ($errors->any())
                 <div class="alert alert-danger">

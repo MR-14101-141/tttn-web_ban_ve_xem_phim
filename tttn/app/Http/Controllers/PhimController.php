@@ -25,13 +25,20 @@ class PhimController extends Controller
             'LPhim' => 'required',
             'trangthai' => 'required',
             'imgPhim' => 'required|image|max:2048',
+            'mieutaPhim' => 'required',
+            'daodienPhim' => 'required',
+            'dienvien' => 'required'
         ]);
         $path = $Request->file('imgPhim')->getRealPath();
         $pic = file_get_contents($path);
         $phim = tbl_phim::create(['tenPhim' => $Request->tenPhim,
             'idLPhim' => $Request->LPhim,
             'trangthai' => $Request->trangthai,
-            'imgPhim' => $pic]);
+            'imgPhim' => $pic,
+            'mieutaPhim' => $Request->mieutaPhim,
+            'daodienPhim' => $Request->daodienPhim,
+            'dienvien' => $Request->dienvien
+        ]);
         return redirect('/phim');
     }
 /*
@@ -54,6 +61,9 @@ return view('phim.show', compact('phim', $phim));
             'LPhim' => 'required',
             'trangthai' => 'required',
             'imgPhim' => 'nullable|image|max:2048',
+            'mieutaPhim' => 'required',
+            'daodienPhim' => 'required',
+            'dienvien' => 'required'
         ]);
         if ($Request->file('imgPhim') != null) {
             $path = $Request->file('imgPhim')->getRealPath();
@@ -62,12 +72,20 @@ return view('phim.show', compact('phim', $phim));
                 ->update(['tenPhim' => $Request->tenPhim,
                     'idLPhim' => $Request->LPhim,
                     'trangthai' => $Request->trangthai,
-                    'imgPhim' => $pic]);
+                    'imgPhim' => $pic,
+                    'mieutaPhim' => $Request->mieutaPhim,
+            		'daodienPhim' => $Request->daodienPhim,
+                    'dienvien' => $Request->dienvien
+                ]);
         } else {
             $phim = tbl_phim::with('tbl_loaiphim')->where('idPhim', $idPhim)
                 ->update(['tenPhim' => $Request->tenPhim,
                     'idLPhim' => $Request->LPhim,
-                    'trangthai' => $Request->trangthai]);
+                    'trangthai' => $Request->trangthai,
+                    'mieutaPhim' => $Request->mieutaPhim,
+            		'daodienPhim' => $Request->daodienPhim,
+                    'dienvien' => $Request->dienvien
+                ]);
         }
 
         return redirect('/phim');
