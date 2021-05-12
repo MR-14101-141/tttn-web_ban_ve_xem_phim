@@ -83,4 +83,26 @@ class adminController extends Controller
           }
         }  
       }
+
+      public function quanlykh(){
+
+        $dskh=DB::table('tbl_khachhang')
+        ->paginate(4);
+        return view('NV.quanlykh', compact('dskh'));
+      }
+
+      public function xoakh($idKH){
+          DB::table('tbl_khachhang')->where('idKH',$idKH)->delete();
+          Session::put('message','Deleted Sucessfully!');
+          return Redirect('/quanlykh');
+      }
+
+      public function suakh($idKH)
+{
+	$cusprofile=DB::table('tbl_khachhang')->where('idKH',$idKH)->get();
+
+	
+	return view('NV.quanlykh')->with('cusprofile',$cusprofile);
+}
+      
 }

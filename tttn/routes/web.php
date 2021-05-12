@@ -65,6 +65,14 @@ Route::post('/update-nv/{idNV}','App\Http\Controllers\adminController@updateprof
 Route::get('change-passwordadmin','App\Http\Controllers\adminController@changepass');
 Route::post('update-passwordadmin','App\Http\Controllers\adminController@updatepass');
 
+//QuanlyKH
+Route::get('/quanlykh','App\Http\Controllers\adminController@quanlykh');
+Route::get('/xoakh/{idKH}', 'App\Http\Controllers\adminController@xoakh');
+Route::get('/suakh/{idKH}', 'App\Http\Controllers\adminController@xoakh');
+Route::get('/suakh/{idKH}','App\Http\Controllers\AuthController@profile')->name('profile');
+Route::get('/profilekh/{idKH}','App\Http\Controllers\AuthController@profile')->name('profile');
+
+
 //lichchieu
 Route::get('/lichchieu',[LichChieuController::class,"index"])->name('lichchieu');
 Route::post("/lichchieu/store",[LichChieuController::class,'store']);
