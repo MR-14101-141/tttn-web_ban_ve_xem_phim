@@ -9,21 +9,21 @@
         <div class="col-md-6">
             <table class="table">
                 <tr>
-                    <td>Old Password</td>
+                    <td>Mật khẩu cũ</td>
                     <td>:</td>
                     <td><input type="password" name="old_password"></td>
                 </tr>
                 <tr>
-                    <td>New Password</td>
+                    <td>Mật khẩu mới</td>
                     <td>:</td>
                     <td><input type="password" name="new_password"></td>
                 </tr>
                 <tr>
-                    <td>Confirm Password</td>
+                    <td>Xác nhận mật khẩu mới</td>
                     <td>:</td>
                     <td><input type="password" name="confirm_password"></td>
                 </tr>
-                <input type="hidden" name="hidden_nvid" value="{{$nv_id}}">
+                <input type="hidden" name="hidden_cusid" value="{{Session::has('idKH')}}">
             </table>
         </div>
         <div class="col-md-3"></div>

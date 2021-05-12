@@ -74,6 +74,7 @@ public function updatepass(Request $request){
 	$cus = DB::table('tbl_khachhang')->where('idKH', $cus_id)->get();
 	foreach ($cus as $key => $value) {
 	  $cus_old_pass = $value ->passwordKH;
+	  break;
 	}
 	if (isset($cus_old_pass)) {
 	  $new = md5($request ->new_password);
@@ -85,7 +86,7 @@ public function updatepass(Request $request){
 	  }else{
 		//Session::put('change_fail', 'Password incorret!');
 		//return Redirect('/change-password');
-		echo '<h1 style="color:red">Password incorret!</h1>
+		echo '<h1 style="color:red">Mật khẩu nhập sai!!</h1>
 		<a href="home">Trở về trang chủ</a>';
 	  }
 	}  

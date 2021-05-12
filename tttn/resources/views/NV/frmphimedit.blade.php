@@ -48,7 +48,7 @@
                 </div>
                 <div class="form-group">
                     <label>Tóm tắt</label>
-                    <input type="text" value="{{$phim->mieutaPhim}}" class="form-control" name="mieutaPhim">
+                    <textarea class="form-control" name="mieutaPhim">{{$phim->mieutaPhim}}</textarea>
                 </div>
                 <div class="form-group">
                     <label>Đạo diễn</label>
@@ -67,7 +67,7 @@
                     </ul>
                 </div>
                 @endif
-                <button type="submit" class="btn btn-primary">Edit</button>
+                <button type="submit" class="btn btn-primary">Sửa</button>
             </form>
         </div>
     </div>

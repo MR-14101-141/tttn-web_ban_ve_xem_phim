@@ -56,7 +56,7 @@ Route::post('/crudKM','App\Http\Controllers\kmController@crudKM');
 //Ghe
 Route::get('/dsghe/{idPhong}/{idLC}','App\Http\Controllers\homeController@viewDSGhe');
 
-//Admin
+//NV
 Route::get('/admin','App\Http\Controllers\adminController@admin');
 Route::post('/admin-dashboard','App\Http\Controllers\adminController@login');
 Route::get('/logoutadmin','App\Http\Controllers\adminController@logout');
@@ -87,8 +87,6 @@ Route::get('/getsignup','App\Http\Controllers\AuthController@getSignup');
 Route::post('/postsignup','App\Http\Controllers\AuthController@postSignup');
 Route::get('/profile/{idKH}','App\Http\Controllers\AuthController@profile')->name('profile');
 Route::post('/update-cus/{idKH}','App\Http\Controllers\AuthController@updateprofile');
-Route::get('change-password','App\Http\Controllers\AuthController@changepass');
-Route::post('update-password','App\Http\Controllers\AuthController@updatepass');
+Route::get('/change-password','App\Http\Controllers\AuthController@changepass');
+Route::post('/update-password','App\Http\Controllers\AuthController@updatepass');
 Route::get('/logout','App\Http\Controllers\AuthController@logout');
-
-//NV

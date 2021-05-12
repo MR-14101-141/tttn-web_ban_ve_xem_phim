@@ -35,7 +35,7 @@
                 </div>
                 <div class="form-group">
                 	<label>Tóm tắt</label>
-                	<input type="text" class="form-control" name="mieutaPhim">
+                	<textarea class="form-control" name="mieutaPhim"></textarea>
                 </div>
                 <div class="form-group">
                 	<label>Đạo diễn</label>
@@ -54,7 +54,7 @@
                     </ul>
                 </div>
                 @endif
-                <button type="submit" class="btn btn-primary">Create</button>
+                <button type="submit" class="btn btn-primary">Thêm</button>
             </form>
         </div>
     </div>

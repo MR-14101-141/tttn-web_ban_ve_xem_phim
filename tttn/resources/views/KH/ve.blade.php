@@ -17,7 +17,7 @@
         </div>
         <br>
 
-        <label>Tên KH:</label>
+        <label>Tên Khách Hàng:</label>
         <div class="input-group input-group-lg">
             <input class="form-control input-lg" type="text" name="tenKH" value="{{$KH->tenKH}}" readonly>
         </div>
@@ -29,7 +29,7 @@
         </div>
         <br>
 
-        <label>SĐT:</label>
+        <label>Số Điện Thoại:</label>
         <div class="input-group input-group-lg">
             <input class="form-control" type="text" name="sdtKH" value="{{$KH->sdtKH}}" readonly>
         </div>

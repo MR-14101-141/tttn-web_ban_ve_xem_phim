@@ -30,7 +30,7 @@
     <header class="header">
         <nav class="navbar navbar-expand-lg px-4 py-2 bg-white shadow">
             <button class="btn btn-outline-dark" onclick="Nav()">☰</button>
-            <a class="navbar-brand font-weight-bold text-uppercase text-base">ADMIN page</a>
+            <a class="navbar-brand font-weight-bold text-uppercase text-base">Trang nhân viên</a>
             <ul class="ml-auto d-flex align-items-center list-unstyled mb-0">
                 <li class="nav-item">
 
@@ -58,7 +58,7 @@ if ($tenNV) {
                                 Thông tin nhân viên</small></a>
                         <div class="dropdown-divider"></div><a href="{{url('/')}}" class="dropdown-item">Trang chủ</a>
                         <div class="dropdown-divider"></div><a href="{{URL::to('/logoutadmin')}}"
-                            class="dropdown-item">Logout</a>
+                            class="dropdown-item">Đăng xuất</a>
                     </div>
                 </li>
             </ul>
@@ -66,8 +66,6 @@ if ($tenNV) {
     </header>
     <div class="d-flex align-items-stretch">
         <div id="sidebar" class="sidebar">
-            <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">MAIN
-            </div>
             <ul class="sidebar-menu list-unstyled">
                 <li class="sidebar-list-item"><a href="{{url('/phim')}}" class="sidebar-link text-dark"><i
                             class="o-table-content-1 mr-3 text-gray"></i><span>Quản Lý Phim</span></a></li>
@@ -80,12 +78,21 @@ if ($tenNV) {
                 <li class="sidebar-list-item"><a href="" class="sidebar-link text-dark"><i
                             class="o-survey-1 mr-3 text-gray"></i><span>Quản Lý Người Dùng</span></a></li>
                 <li class="sidebar-list-item"><a href="{{URL::to('/logoutadmin')}}" class="sidebar-link text-dark"><i
-                            class="o-exit-1 mr-3 text-gray"></i><span>Logout</span></a></li>
+                            class="o-exit-1 mr-3 text-gray"></i><span>Đăng xuất</span></a></li>
             </ul>
 
         </div>
         @yield('dscuanv')
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
     <script>
     function Nav() {
         if (document.getElementById("sidebar").style.marginLeft == "-110px") {
@@ -100,14 +107,6 @@ if ($tenNV) {
     function closeNav() {
         document.getElementById("sidebar").style.width = "0";
     }
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
 </body>
 

@@ -69,6 +69,7 @@ class adminController extends Controller
         $nv = DB::table('tbl_nhanvien')->where('idNV', $nv_id)->get();
         foreach ($nv as $key => $value) {
         $nv_old_pass = $value ->passwordNV;
+        break;
         }
         if (isset($nv_old_pass)) {
           $new = md5($request ->new_password);

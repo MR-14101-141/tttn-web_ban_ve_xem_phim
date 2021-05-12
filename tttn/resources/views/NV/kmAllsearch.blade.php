@@ -27,7 +27,8 @@ function openurl(url) {
     window.location.href = url;
 }
 </script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </script>
 <!--AJAX live search-->
 <script>
 $(document).ready(function() {

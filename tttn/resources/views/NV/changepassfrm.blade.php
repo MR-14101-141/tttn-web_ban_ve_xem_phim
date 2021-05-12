@@ -9,17 +9,17 @@
         <div class="col-md-6">
             <table class="table">
                 <tr>
-                    <td>Old Password</td>
+                    <td>Mật khẩu cũ</td>
                     <td>:</td>
                     <td><input type="password" name="old_password"></td>
                 </tr>
                 <tr>
-                    <td>New Password</td>
+                    <td>Mật khẩu mới</td>
                     <td>:</td>
                     <td><input type="password" name="new_password"></td>
                 </tr>
                 <tr>
-                    <td>Confirm Password</td>
+                    <td>Xác nhận mật khẩu mới</td>
                     <td>:</td>
                     <td><input type="password" name="confirm_password"></td>
                 </tr>
@@ -29,7 +29,7 @@
         <div class="col-md-3"></div>
         <div class="col-md-5"></div>
         <div class="col-md-2 justify-content-center">
-            <input type="submit" value="Update" name="update" class="btn btn-warning">
+            <input type="submit" value="Đổi mật khẩu" name="update" class="btn btn-warning">
         </div>
         <div class="col-md-5"></div>
     </form>

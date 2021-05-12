@@ -145,14 +145,14 @@
                 {{DB::table('tbl_khachhang')->where('idKH',Session::get('idKH'))->value('tenKH')}}
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="{{URL::to('/profile',Session::get('idKH'))}}">Profile</a></li>
-                    <li><a class="dropdown-item" href="{{URL::to('/logout')}}">Logout</a></li>
+                    <li><a class="dropdown-item" href="{{URL::to('/profile',Session::get('idKH'))}}">Thông tin cá nhân</a></li>
+                    <li><a class="dropdown-item" href="{{URL::to('/logout')}}">Đăng xuất</a></li>
                 </ul>
                 </div>
                 </div>
                 @else
                 <div class="control-panel">
-                    <a class="btn btn-md btn--warning btn--book login-window">Login</a>
+                    <a class="btn btn-md btn--warning btn--book login-window">Đăng nhập</a>
                 </div>
                 @endif
             </div>
@@ -163,14 +163,15 @@
             <div class="container">
                 <form id='search-form' action="{{URL::to('/phimSearch')}}" method='post' class="search">
                     {{csrf_field()}}
-                    <input type="text" name="search_item" class="search__field" placeholder="Search">
+                    <input type="text" name="search_item" class="search__field" placeholder="Tên bộ phim">
                     <select name="sorting_item" id="search-sort" class="search__sort" tabindex="0">
                         <option value="tenPhim" selected='selected'>Theo tên phim</option>
-                        <option value="2">Theo năm</option>
-                        <option value="3">Theo nsx</option>
+                        <option value="daodienPhim">Theo đạo diễn</option>
+                        <option value="dienvien">Theo diễn viên</option>
+                        <option value="mieutaPhim">Theo miêu tả</option>
                     </select>
                     <button type='submit' name="crud" value="search"
-                        class="btn btn-md btn--danger search__button">search a movie</button>
+                        class="btn btn-md btn--danger search__button">Tìm kiếm phim</button>
                 </form>
             </div>
         </div>
@@ -205,28 +206,20 @@
                     <form id="login-form" class="login" 
                     action="{{URL::to('/actionlogin')}}" method='post' novalidate=''>
                         {{csrf_field()}}
-                        <p class="login__title">Login <br><span class="login-edition">A.Movie</span></p>
+                        <p class="login__title">Đăng nhập <br><span class="login-edition">A.Movie</span></p>
 
-                        <div class="social social--colored">
-                            <a href='#' class="social__variant fa fa-facebook"></a>
-                            <a href='#' class="social__variant fa fa-twitter"></a>
-                            <a href='#' class="social__variant fa fa-tumblr"></a>
-                        </div>
 
-                        <p class="login__tracker">or</p>
 
                         <div class="field-wrap">
                             <input type='email' placeholder='Email' name='email' class="login__input">
-                            <input type='password' placeholder='Password' name='password' class="login__input">
-
-                            <input type='checkbox' id='#informed' class='login__check styled'>
-                            <label for='#informed' class='login__check-info'>remember me</label>
+                            <input type='password' placeholder='Mật khẩu' name='password' class="login__input">
                         </div>
 
                         <div class="login__control">
                             <button type='submit' name="crud" value="login"
-                                class="btn btn-md btn--warning btn--wider">Login</button>           
-                                <a href="{{URL::to('/getsignup')}}" class="login__tracker form__tracker">Sign Up</a>
+                                class="btn btn-md btn--warning btn--wider">Đăng nhập</button>     
+                                <p class="login__tracker">Hoặc chưa có tài khoản ?</p>      
+                                <a href="{{URL::to('/getsignup')}}" class="login__tracker form__tracker">Đăng ký ngay!!!</a>
                         </div>
                     </form>
                 </div>

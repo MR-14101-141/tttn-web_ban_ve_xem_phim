@@ -14,23 +14,23 @@
                     <td><input class="input100" type="email" name="email" placeholder="Địa chỉ email"></td>
                 </tr>
                 <tr>
-                    <td>Password</td>
+                    <td>Mật khẩu</td>
                     <td>:</td>
                     <td><input class="input100" type="password" name="password" placeholder="Mật khẩu"></td>
                 </tr>
                 <tr>
-                    <td>Re-password</td>
+                    <td>Xác nhận lại mật khẩu</td>
                     <td>:</td>
                     <td><input class="input100" type="password" name="repass" placeholder="Nhập lại mật khẩu"></td>
                 </tr>
                 <tr>
-                    <td>Name</td>
+                    <td>Tên khách hàng</td>
                     <td>:</td>
                     <td><input class="input100" type="text" name="tenKH" placeholder="Nhập tên của bạn..."></td>
                 </tr>
                 <tr>
 
-                    <td>Gioi tinh</td>
+                    <td>Giới tính</td>
                     <td>:</td>
                     <td>
                     <select name="gioitinh" class="input100 form-control input-lg m-bot15">
@@ -45,7 +45,7 @@
                     <td><input type="date" name="ngaysinh"></td>
                 </tr>
                 <tr>
-                    <td>Sđt</td>
+                    <td>Số điện thoại</td>
                     <td>:</td>
                     <td><input class="input100" type="text" name="sdtKH" placeholder="Nhập số điện thoại..."></td>
                 </tr>

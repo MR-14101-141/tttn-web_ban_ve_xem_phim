@@ -2,7 +2,7 @@
 @section('dscuanv')
 @foreach($nvprofile as $key => $nvprofile)
 <section class="container">
-    <h1 class="d-flex justify-content-center">THÔNG TIN PROFILE NHÂN VIÊN</h1>
+    <h1 class="d-flex justify-content-center">THÔNG TIN NHÂN VIÊN</h1>
 
     <form action="{{URL::to('/update-nv/'.$nvprofile->idNV)}}" method="post">
         @csrf
@@ -16,9 +16,9 @@
                     <td>{{$nvprofile->emailNV}}</td>
                 </tr>
                 <tr>
-                    <td>Password</td>
+                    <td>Mật khẩu</td>
                     <td>:</td>
-                    <td><a href="{{URL::to('/change-passwordadmin')}}">Change</a></td>
+                    <td><a href="{{URL::to('/change-passwordadmin')}}">Đổi mật khẩu</a></td>
                 </tr>
                 <tr>
                     <td>Tên</td>
@@ -65,7 +65,7 @@
         <div class="col-md-3"></div>
         <div class="col-md-5"></div>
         <div class="col-md-2 justify-content-center">
-            <input type="submit" value="Update" name="update" class="btn btn-warning">
+            <input type="submit" value="Sửa" name="update" class="btn btn-warning">
         </div>
         <div class="col-md-5"></div>
     </form>

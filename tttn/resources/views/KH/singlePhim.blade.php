@@ -19,11 +19,11 @@
                             <p class="movie__option"><strong>Diễn viên: </strong>{{$phim->dienvien}}</p>
                             @if(Session::has('idKH'))
                             <div class="movie__btns movie__btns--full">
-                                <a href="{{URL::to('/dsLC',$phim->idPhim)}}" class="btn btn-md btn--warning">book a ticket for this movie</a>
+                                <a href="{{URL::to('/dsLC',$phim->idPhim)}}" class="btn btn-md btn--warning">Đặt vé</a>
                             </div>
                             @else
                             <div class="movie__btns movie__btns--full">
-                            <a  class="btn btn-md btn--warning btn--book btn-control--home login-window">book a ticket for this movie</a>
+                            <a  class="btn btn-md btn--warning btn--book btn-control--home login-window">Đặt vé</a>
                             </div>
                             @endif
 

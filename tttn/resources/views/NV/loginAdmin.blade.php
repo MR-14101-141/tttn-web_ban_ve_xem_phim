@@ -21,16 +21,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="{{asset('backend/css/style-responsive.css')}}" rel="stylesheet"/>
 <!-- font CSS -->
 <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-<!-- font-awesome icons -->
-<link rel="stylesheet" href="{{asset('public/backend/css/font.css')}}" type="text/css"/>
-<link href="{{asset('public/backend/css/font-awesome.css')}}" rel="stylesheet"> 
 <!-- //font-awesome icons -->
 <script src="{{asset('backend/js/jquery2.0.3.min.js')}}"></script>
 </head>
 <body>
 <div class="log-w3">
 <div class="w3layouts-main">
-	<h2>Đăng Nhập</h2>
+	<h2>NHÂN VIÊN</h2>
 	<?php
 		$fail = Session::get('fail');
 		if($fail){
@@ -41,8 +38,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<form action="{{URL::to('/admin-dashboard')}}" method="post">
 			@csrf
 			<input type="email" class="ggg" name="email" placeholder="E-MAIL" required="">
-			<input type="password" class="ggg" name="admin_password" placeholder="PASSWORD" required="">
-			<span><input type="checkbox" />Remember Me</span>
+			<input type="password" class="ggg" name="admin_password" placeholder="MẬT KHẨU" required="">
 		
 				<div class="clearfix"></div>
 				<input type="submit" value="Đăng nhập" name="login">

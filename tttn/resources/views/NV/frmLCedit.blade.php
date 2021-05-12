@@ -22,7 +22,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Phong</label>
+                    <label>Phòng</label>
                     <select class="border border-black" name="idPhong">
                         @foreach(DB::table('tbl_phong')->get() as $Phong)
                         @if($Phong->idPhong==$lichchieu->idPhong)
@@ -34,7 +34,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Gio chieu</label>
+                    <label>Giờ chiếu</label>
                     <input type="datetime-local" class="form-control" id="giochieu_" name="giochieu">
                 </div>
                 @if ($errors->any())

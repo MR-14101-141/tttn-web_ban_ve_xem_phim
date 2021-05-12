@@ -8,7 +8,7 @@
             <form method='get' style="background-color:white">
                 <label for="select_item">Loại Phim : </label>
                 <select id="select_item" name="select_item" class="search__sort" tabindex="0">
-                    <option value="{{URL::to('/dsphim','all')}}">All</option>
+                    <option value="{{URL::to('/dsphim','all')}}">Tất cả</option>
                     @foreach($dsLphim as $Lphim)
                     <option value="{{URL::to('/dsphim',$Lphim->idLPhim)}}">{{$Lphim->tenLPhim}}</option>
                     @endforeach

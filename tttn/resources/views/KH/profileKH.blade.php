@@ -2,7 +2,7 @@
 @section('layout_KH')
 @foreach($cusprofile as $key => $cusprofile)
 <section class="container">
-    <h1 class="d-flex justify-content-center">THÔNG TIN CHI TIẾT PROFILE</h1>
+    <h1 class="d-flex justify-content-center">THÔNG TIN CHI TIẾT KHÁCH HÀNG</h1>
 
     <form action="{{URL::to('/update-cus/'.$cusprofile->idKH)}}" method="post">
         @csrf
@@ -15,18 +15,18 @@
                     <td>{{$cusprofile->emailKH}}</td>
                 </tr>
                 <tr>
-                    <td>Password</td>
+                    <td>Mật khẩu</td>
                     <td>:</td>
-                    <td><a href="{{URL::to('/change-password')}}">Change</a></td>
+                    <td><a href="{{URL::to('/change-password')}}">Đổi mật khẩu</a></td>
                 </tr>
                 <tr>
-                    <td>Name</td>
+                    <td>Tên</td>
                     <td>:</td>
                     <td><input type="text" name="name" value="{{$cusprofile->tenKH}}" id=""></td>
                 </tr>
                 <tr>
 
-                    <td>Gioi tinh</td>
+                    <td>Giới tính</td>
                     <td>:</td>
                     <?php
                 if($cusprofile->gioitinhKH == 'Nam'){
