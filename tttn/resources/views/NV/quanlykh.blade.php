@@ -25,8 +25,6 @@
                     <td>{{$dskh->ngaysinh}}</td>
                     <td>{{$dskh->sdtKH}}</td>
                     <td>
-                    <a href="{{URL::to('/xoakh/'.$dskh->idKH)}}" class="btn btn-danger">
-                   XÓA</a>
                   
                    <a href="{{URL::to('/profilekh/'.$dskh->idKH)}}" class="btn btn-primary">
                    SỬA</a>

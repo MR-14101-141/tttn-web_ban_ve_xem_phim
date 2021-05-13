@@ -67,10 +67,10 @@ Route::post('update-passwordadmin','App\Http\Controllers\adminController@updatep
 
 //QuanlyKH
 Route::get('/quanlykh','App\Http\Controllers\adminController@quanlykh');
-Route::get('/xoakh/{idKH}', 'App\Http\Controllers\adminController@xoakh');
-Route::get('/suakh/{idKH}', 'App\Http\Controllers\adminController@xoakh');
-Route::get('/suakh/{idKH}','App\Http\Controllers\AuthController@profile')->name('profile');
-Route::get('/profilekh/{idKH}','App\Http\Controllers\AuthController@profile')->name('profile');
+Route::get('/frmdoimatkhauKH/{idKH}', 'App\Http\Controllers\adminController@frmdoimatkhaukh');
+Route::post('/doimatkhauKH', 'App\Http\Controllers\adminController@doimatkhaukh');
+Route::post('/suakh/{idKH}', 'App\Http\Controllers\adminController@suakh');
+Route::get('/profilekh/{idKH}','App\Http\Controllers\adminController@profilekh')->name('profile');
 
 
 //lichchieu

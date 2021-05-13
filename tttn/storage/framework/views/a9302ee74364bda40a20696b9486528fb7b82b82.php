@@ -75,7 +75,7 @@ if ($tenNV) {
                             class="o-survey-1 mr-3 text-gray"></i><span>Quản Lý Lịch Chiếu</span></a></li>
                 <li class="sidebar-list-item"><a href="<?php echo e(url('/dskm')); ?>" class="sidebar-link text-dark"><i
                             class="o-survey-1 mr-3 text-gray"></i><span>Quản Lý Khuyến Mãi</span></a></li>
-                <li class="sidebar-list-item"><a href="" class="sidebar-link text-dark"><i
+                <li class="sidebar-list-item"><a href="<?php echo e(URL::to('/quanlykh')); ?>" class="sidebar-link text-dark"><i
                             class="o-survey-1 mr-3 text-gray"></i><span>Quản Lý Người Dùng</span></a></li>
                 <li class="sidebar-list-item"><a href="<?php echo e(URL::to('/logoutadmin')); ?>" class="sidebar-link text-dark"><i
                             class="o-exit-1 mr-3 text-gray"></i><span>Đăng xuất</span></a></li>

@@ -1,7 +1,5 @@
 
 <?php $__env->startSection('layout_KH'); ?>
-<?php echo e($cus_id = Session::get('idKH')); ?>
-
 <section class="container">
     <h1 class="d-flex justify-content-center">Đổi mật khẩu</h1>
     <form action="<?php echo e(URL::to('/update-password')); ?>" method="post">
@@ -24,13 +22,13 @@
                     <td>:</td>
                     <td><input type="password" name="confirm_password"></td>
                 </tr>
-                <input type="hidden" name="hidden_cusid" value="<?php echo e(Session::has('idKH')); ?>">
+                <input type="hidden" name="hidden_cusid" value="<?php echo e(Session::get('idKH')); ?>">
             </table>
         </div>
         <div class="col-md-3"></div>
         <div class="col-md-5"></div>
         <div class="col-md-2 justify-content-center">
-            <input type="submit" value="Update" name="update" class="btn btn-warning">
+            <input type="submit" value="Đổi mật khẩu" name="update" class="btn btn-warning">
         </div>
         <div class="col-md-5"></div>
     </form>

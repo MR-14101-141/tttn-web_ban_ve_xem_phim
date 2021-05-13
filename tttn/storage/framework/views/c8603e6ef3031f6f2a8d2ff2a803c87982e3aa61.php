@@ -23,7 +23,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Phong</label>
+                    <label>Phòng</label>
                     <select class="border border-black" name="idPhong">
                         <?php $__currentLoopData = DB::table('tbl_phong')->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $Phong): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <?php if($Phong->idPhong==$lichchieu->idPhong): ?>
@@ -35,7 +35,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Gio chieu</label>
+                    <label>Giờ chiếu</label>
                     <input type="datetime-local" class="form-control" id="giochieu_" name="giochieu">
                 </div>
                 <?php if($errors->any()): ?>

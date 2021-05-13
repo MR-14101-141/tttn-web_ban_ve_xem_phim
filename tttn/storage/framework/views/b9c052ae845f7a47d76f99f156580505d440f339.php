@@ -64,7 +64,7 @@
         <div class="col-md-3"></div>
         <div class="col-md-5"></div>
         <div class="col-md-2 justify-content-center">
-            <input type="submit" value="Update" name="update" class="btn btn-warning">
+            <input type="submit" value="Sửa" name="update" class="btn btn-warning">
         </div>
         <div class="col-md-5"></div>
     </form>

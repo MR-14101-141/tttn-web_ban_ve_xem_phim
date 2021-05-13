@@ -18,7 +18,7 @@ class AuthController extends Controller
    		if($result == true){
    			Session::put('idKH',$result->idKH);
    			//Session::put('tenKH',$result->tenKH);
-			$idKH=$result->idKH;
+			//$idKH=$result->idKH;
 			return redirect()->back();
    			//return Redirect::to('/profile');
    		}else{
@@ -89,7 +89,11 @@ public function updatepass(Request $request){
 		echo '<h1 style="color:red">Mật khẩu nhập sai!!</h1>
 		<a href="home">Trở về trang chủ</a>';
 	  }
-	}  
+	} 
+	else{
+		echo '<h1 style="color:red">Mật khẩu nhập sai!!</h1>
+		<a href="home">Trở về trang chủ</a>';
+	  }
   }
   public function logout(){
 	Auth::logout();

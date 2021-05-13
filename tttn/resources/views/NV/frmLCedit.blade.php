@@ -1,7 +1,7 @@
 @extends('layout_NV')
 @section('dscuanv')
 <div class="container-fluid">
-    <h1>Edit Phim</h1>
+    <h1>Sửa Lịch Chiếu</h1>
     <hr>
     <div class="card">
         <div class="card-body">

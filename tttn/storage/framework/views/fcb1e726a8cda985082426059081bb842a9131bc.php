@@ -1,7 +1,7 @@
 
 <?php $__env->startSection('dscuanv'); ?>
 <div class="container-fluid">
-    <h1>Tao Phim</h1>
+    <h1>Tạo Phim</h1>
     <hr>
     <div class="card">
         <div class="card-body">
