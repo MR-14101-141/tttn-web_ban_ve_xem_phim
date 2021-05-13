@@ -3,11 +3,14 @@
 {{$nv_id = Session::get('idNV')}}
 <section class="container">
     <h1 class="d-flex justify-content-center">Đổi mật khẩu</h1>
+    <hr>
+
+    <div class="card">
+        <div class="card-body">
     <form action="{{URL::to('/update-passwordadmin')}}" method="post">
         @csrf
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-            <table class="table">
+        <div>
+            <table class="table d-flex justify-content-center">
                 <tr>
                     <td>Mật khẩu cũ</td>
                     <td>:</td>
@@ -26,12 +29,9 @@
                 <input type="hidden" name="hidden_nvid" value="{{$nv_id}}">
             </table>
         </div>
-        <div class="col-md-3"></div>
-        <div class="col-md-5"></div>
-        <div class="col-md-2 justify-content-center">
+        <div class="d-flex justify-content-center">
             <input type="submit" value="Đổi mật khẩu" name="update" class="btn btn-warning">
         </div>
-        <div class="col-md-5"></div>
     </form>
 </section>
 @endsection

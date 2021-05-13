@@ -3,13 +3,15 @@
 @foreach($nvprofile as $key => $nvprofile)
 <section class="container">
     <h1 class="d-flex justify-content-center">THÔNG TIN NHÂN VIÊN</h1>
+    <hr>
 
+    <div class="card">
+        <div class="card-body">
     <form action="{{URL::to('/update-nv/'.$nvprofile->idNV)}}" method="post">
         @csrf
         
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-            <table class="table">
+        <div>
+            <table class="table d-flex justify-content-center">
                 <tr>
                     <td>Email</td>
                     <td>:</td>
@@ -62,12 +64,9 @@
 
             </table>
         </div>
-        <div class="col-md-3"></div>
-        <div class="col-md-5"></div>
-        <div class="col-md-2 justify-content-center">
+        <div class="d-flex justify-content-center">
             <input type="submit" value="Sửa" name="update" class="btn btn-warning">
         </div>
-        <div class="col-md-5"></div>
     </form>
 </section>
 @endforeach
